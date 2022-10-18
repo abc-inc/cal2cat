@@ -26,16 +26,16 @@ import (
 
 // TestEvents_Conflicts tests the conflict resolution strategy.
 //
-//  07:00 A
-//  08:00 A B C
-//  09:00   B   D
-//  10:00   B
+//	07:00 A
+//	08:00 A B C
+//	09:00   B   D
+//	10:00   B
 //
-//  - A is reported
-//  - B is skipped because of A
-//  - C is skipped because of A
-//  - C is NOT skipped because of B (already conflicts with A)
-//  - D is reported (NOT skipped because B is conflicting with A)
+//	- A is reported
+//	- B is skipped because of A
+//	- C is skipped because of A
+//	- C is NOT skipped because of B (already conflicts with A)
+//	- D is reported (NOT skipped because B is conflicting with A)
 func TestEvents_Conflicts(t *testing.T) {
 	today := time.Now().Truncate(24 * time.Hour)
 	es := Events([]Wrapper{
