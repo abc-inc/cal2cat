@@ -1,24 +1,10 @@
-### Eclipse
-.classpath
-.project
-.settings/
+### VisualStudioCode
+/.vscode/
 
 ### JetBrains
-.idea/
-out/
-*.iml
-
-### Visual Studio Code
-.vscode/
+/.idea/
 
 ### misc
-bin/
-*.ics
-*.log
-*.tmp
-
-### Go
-dist/
-tmp/
-*.out
-*.test
+/bin/
+/dist/
+/tmp/

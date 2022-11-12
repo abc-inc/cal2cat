@@ -72,7 +72,7 @@ func readFrom(path string) (io.ReadCloser, error) {
 	}
 
 	t := &http.Transport{}
-	t.RegisterProtocol("file", http.NewFileTransport(http.Dir("/")))
+	t.RegisterProtocol("file", http.NewFileTransport(http.Dir("/"))) //nolint:gosec
 	c := &http.Client{Transport: t}
 	res, err := c.Get(path)
 	if err != nil {

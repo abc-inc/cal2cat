@@ -1,0 +1,21 @@
+archives:
+  - builds:
+      - default
+    format: binary
+    name_template: "{{ .Binary }}-{{ .Version }}-{{ .Os }}_{{ .Arch }}"
+
+builds:
+  - id: "default"
+    main: ./cmd/persephone/
+    flags:
+      - -trimpath
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+    mod_timestamp: "{{ .CommitTimestamp }}"
+
+env:
+  - CGO_ENABLED=0

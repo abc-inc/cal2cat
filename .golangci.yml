@@ -15,14 +15,12 @@ linters:
     # additional
     - bodyclose
     - errorlint
-    - gochecknoinits
     - gocognit
     - goconst
     - gocritic
     - gocyclo
     - goimports
     - gosec
-    - lll
     - misspell
     - nolintlint
     - prealloc
@@ -31,3 +29,11 @@ linters:
     - unconvert
     - unparam
     - whitespace
+
+linters-settings:
+  gocritic:
+    disabled-checks:
+      - ifElseChain
+  whitespace:
+    multi-if: true
+    multi-func: true

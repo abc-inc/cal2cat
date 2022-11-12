@@ -1,7 +1,6 @@
 export CGO_ENABLED ?= 0
 GOFLAGS += -trimpath
 LDFLAGS += -X main.version=$(VERSION)
-
 INSTALL ?= install
 INSTALL_PROGRAM ?= $(INSTALL)
 
